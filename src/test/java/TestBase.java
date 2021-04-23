@@ -85,14 +85,14 @@ public class TestBase {
     }
     public void fillContactForm(Contact contact){
         fillByLocator(By.xpath("//input[@placeholder='Name']"),contact.getName());
-        fillByLocator(By.cssSelector("[placeholder='Last Name']"),contact.getLastName());
-        fillByLocator(By.cssSelector("[placeholder='Phone']"),contact.getPhone());
-        fillByLocator(By.cssSelector("[placeholder='email']"),contact.getPhone());
-        fillByLocator(By.cssSelector("[placeholder='Address']"), contact.getAddress());
-        fillByLocator(By.cssSelector("[placeholder='description']"), contact.getDescription());
+        fillByLocator(By.xpath("//input[@placeholder='Last Name']"),contact.getLastName());
+        fillByLocator(By.xpath("//input[@placeholder='Phone']"),contact.getPhone());
+        fillByLocator(By.xpath("//input[@placeholder='email']"),contact.getPhone());
+        fillByLocator(By.xpath("//input[@placeholder='Address']"), contact.getAddress());
+        fillByLocator(By.xpath("//input[@placeholder='description']"), contact.getDescription());
 
     }
     public void saveNewContact(){
         wd.findElement(By.xpath("//button/b[text()='Save']")).click();
     }
-}
+}//input[@placeholder='Name']
