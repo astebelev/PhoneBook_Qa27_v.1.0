@@ -95,4 +95,4 @@ public class TestBase {
     public void saveNewContact(){
         wd.findElement(By.xpath("//button/b[text()='Save']")).click();
     }
-}//input[@placeholder='Name']
+}
